@@ -1,0 +1,7 @@
+node_modules/
+**/*.spec.*
+**/style/
+*.html
+dist/
+lib/
+node_modules/**/lib
