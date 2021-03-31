@@ -68,6 +68,7 @@ for (let i = 0; i < 100; i++) {
   });
 }
 export default {
+  name: 'test',
   data() {
     this.cacheData = data.map(item => ({ ...item }));
     return {

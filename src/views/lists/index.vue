@@ -45,7 +45,7 @@ const request = function(query){
         1,
         2
       ],
-      "asyncSelectArr": [
+      "_asyncSelectArr": [
         {
           "id": 1,
           "name": "name1",
@@ -70,6 +70,7 @@ const request = function(query){
 }
 
 export default {
+  name: 'lists',
   components: {
     SearchOutlined
   },
@@ -242,13 +243,13 @@ export default {
           key: 'name2'
         },
         {
-          label: 'rangePicker',
+          label: '日期',
           key: '_rangePicker',
           keys: ['rangePicker.start', 'rangePicker.end'],
           type: 'rangePicker'
         },
         {
-          label: 'select 单选',
+          label: '单选',
           key: 'select',
           type: 'select',
           props: {
@@ -269,22 +270,45 @@ export default {
           }
         },
         {
-          label: 'cascader',
+          label: '多选',
+          key: 'selectMultiple',
+          type: 'select',
+          format: 'string',
+          props: {
+            mode: 'multiple',
+            options: [
+              {
+                label: 'Apple',
+                value: '1'
+              },
+              {
+                label: 'Pear',
+                value: '2'
+              },
+              {
+                label: 'Orange',
+                value: '3'
+              }
+            ]
+          }
+        },
+        {
+          label: '联动',
           key: '_cascader',
           keys: ['province', 'city', 'district'],
           type: 'cascader',
           props: {
             options:  [
               {
-                value: 'zhejiang',
+                value: '1',
                 label: 'Zhejiang',
                 children: [
                   {
-                    value: 'hangzhou',
+                    value: '2',
                     label: 'Hangzhou',
                     children: [
                       {
-                        value: 'xihu',
+                        value: '3',
                         label: 'West Lake',
                       },
                     ],
@@ -292,15 +316,15 @@ export default {
                 ],
               },
               {
-                value: 'jiangsu',
+                value: '11',
                 label: 'Jiangsu',
                 children: [
                   {
-                    value: 'nanjing',
+                    value: '12',
                     label: 'Nanjing',
                     children: [
                       {
-                        value: 'zhonghuamen',
+                        value: '13',
                         label: 'Zhong Hua Men',
                       },
                     ],
@@ -311,7 +335,7 @@ export default {
           }
         },
         {
-          label: 'async-select(单)',
+          label: '异步单选',
           key: 'asyncSelect1',
           type: 'asyncSelect',
           props: {
@@ -321,9 +345,8 @@ export default {
           }
         },
         {
-          label: 'async-select',
+          label: '异步多选',
           key: 'asyncSelect',
-          selectedKey: 'asyncSelectArr',
           type: 'asyncSelect',
           props: {
             params: {},
@@ -358,7 +381,7 @@ export default {
           "city": "nanjing",
           "district": "zhonghuamen",
           asyncSelect: [1, 2, 3, 5],
-          asyncSelectArr: [
+          _asyncSelectArr: [
             {
               id: 1,
               name: 'name1'

@@ -12,9 +12,6 @@
   export default {
     setup() {
       let locale = inject('locale') || {}
-      console.log(resolveComponent, resolveComponent('a-breadcrumb'))
-      console.log(resolveComponent, resolveComponent('u-breadcrumb'))
-
       return {
         locale
       }

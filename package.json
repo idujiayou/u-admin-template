@@ -14,7 +14,7 @@
     "link:remove": "yarn unlink u-admin-component && yarn unlink"
   },
   "dependencies": {
-    "ant-design-vue": "^2.0.0-rc.1",
+    "ant-design-vue": "^2.0.0-rc.5",
     "core-js": "^3.6.5",
     "default-passive-events": "^2.0.0",
     "screenfull": "^5.0.2",

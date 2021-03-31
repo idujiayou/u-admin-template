@@ -14,7 +14,9 @@
 import {
   SearchOutlined
 } from '@ant-design/icons-vue'
+
 export default {
+  name: 'Dashboard',
   components: {
     SearchOutlined
   },
@@ -245,7 +247,7 @@ export default {
         {
           label: 'async-select',
           key: 'asyncSelect',
-          selectedKey: 'asyncSelectArr',
+          selectedKey: '_asyncSelectArr',
           type: 'asyncSelect',
           props: {
             params: {},
@@ -639,7 +641,7 @@ export default {
             {
               label: 'async-select',
               key: 'asyncSelect',
-              selectedKey: 'asyncSelectArr',
+              selectedKey: '_asyncSelectArr',
               type: 'asyncSelect',
               col: 1,
               props: {
@@ -689,7 +691,7 @@ export default {
                     1,
                     2
                   ],
-                  "asyncSelectArr": [
+                  "_asyncSelectArr": [
                     {
                       "id": 1,
                       "name": "name1",
@@ -730,7 +732,7 @@ export default {
                 dataIndex: 'age',
                 form: {
                   key: 'asyncSelect',
-                  selectedKey: 'asyncSelectArr',
+                  selectedKey: '_asyncSelectArr',
                   type: 'asyncSelect',
                   rules: [ 'required'],
                   props: {
@@ -795,7 +797,7 @@ export default {
           "city": "nanjing",
           "district": "zhonghuamen",
           asyncSelect: [1, 2, 3, 5],
-          asyncSelectArr: [
+          _asyncSelectArr: [
             {
               id: 1,
               name: 'name1'

@@ -1,25 +1,23 @@
 <template>
-  <a-menu theme="dark"  mode="inline">
-    <a-sub-menu key="sub1">
-      <template v-slot:title>
-        <span><span>User</span></span>
-      </template>
-      <a-menu-item key="3">Tom</a-menu-item>
-      <a-menu-item key="4">Bill</a-menu-item>
-      <a-menu-item key="5">Alex</a-menu-item>
-    </a-sub-menu>
-    <a-sub-menu key="sub2">
-      <template v-slot:title>
-        <span><span>Team</span></span>
-      </template>
-      <a-menu-item key="6">Team 1</a-menu-item>
-      <a-menu-item key="8">Team 2</a-menu-item>
-    </a-sub-menu>
+  <a-menu theme="dark"  mode="inline" :selectedKeys="[$route.path]">
+    <appNavItem 
+      v-for="route in navs" 
+      :key="route.path"
+      :item="route"/>
   </a-menu>
 </template>
 <script>
+import appNavItem from './app-nav-item'
+import router from '@/router'
+
 export default {
   components: {
+    appNavItem
+  },
+  data() {
+    return {
+      navs: router.options.routes[0].children
+    }
   }
 }
 </script>

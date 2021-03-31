@@ -1,9 +1,12 @@
 import zhLocale from './zh_CN'
 import antZhCN from 'ant-design-vue/es/locale/zh_CN'
+import adminZhCN from 'u-admin-component/src/lang/zh_CN'
+
 import { isPlainObject } from 'lodash'
 const messages = {
   zhCN: {
     ...antZhCN,
+    ...adminZhCN,
     ...zhLocale
   }
 }
